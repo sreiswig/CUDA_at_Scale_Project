@@ -8,10 +8,7 @@ in
   env.GREET = "devenv";
 
   # https://devenv.sh/packages/
-  packages = with pkgs; [ cudaPackages.cudatoolkit
-                          libGL
-                          gcc12 
-                        ];
+  packages = [ pkgs.cudaPackages.cudatoolkit pkgs.libGL pkgs.cudaPackages.nsight_systems pkgs.gcc12 ];
 
   # https://devenv.sh/languages/
   # languages.rust.enable = true;
